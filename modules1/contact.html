@@ -1,0 +1,327 @@
+<style>
+.body .contactus.row {
+    background-image: url('/images1/worldmap.png');
+    background-repeat: no-repeat;
+    background-color: #069edb;
+    background-position: center;
+    padding-bottom: 20px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/*.contactus.row {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}*/
+
+.contactus h1 {
+    text-align: left;
+    font-size: 36px;
+    padding: 20px 0;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.contactus .page {
+    margin: 0 auto;
+}
+
+.contactus .menu {
+    width: 220px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border: 2px solid #fff;
+    position: absolute;
+    left: 30px;
+    top: 100px;
+}
+
+.contactus .menu .title {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #b7b7b7;
+    text-align: left;
+    color: #000;
+    cursor: pointer;
+}
+
+.contactus .menu .title.active {
+    color: #c9252b;
+}
+
+.contactus .menu .title.active::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #fff;
+    position: absolute;
+    left: 218px;
+}
+
+.contactus .menu .title:last-child {
+    border-bottom: none;
+}
+
+.contactus .list {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border: 2px solid #fff;
+    position: absolute;
+    left: 270px;
+    top: 100px;
+    height: 165px;
+    display: none;
+}
+
+.contactus .list .headtxt {
+    font-weight: bold;
+}
+
+.contactus .list.active {
+    display: block;
+}
+
+.contactus .country {
+    border-bottom: 1px solid #b7b7b7;
+    margin-bottom: 5px;
+    height: 25px;
+}
+
+.contactus .country .flag {
+    background-image: url('images1/flags4.png');
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 11px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contactus .country .flag.uae {
+    background-position: 0px -2223px;
+}
+
+.contactus .country .flag.india {
+    background-position: 0px -1694px;
+}
+
+.contactus .country .flag.singapore {
+    background-position: 0px -22px;
+}
+
+.contactus .formcol .formdiv {
+    max-width: 350px;
+    margin: 25px auto;
+    top: 10px;
+}
+
+.contactus form {
+    background-color: rgb(250, 250, 250);
+    padding: 10px 15px;
+}
+
+.contactus .formcol .head-txt {
+    background-color: #2196F3;
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+}
+
+.contactus .form-group {
+    position: relative;
+}
+
+.contactus .form-group.frm50 {
+    height: 50px;
+}
+
+.contactus .form-group.frm70 {
+    height: 70px;
+}
+
+.contactus label {
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 12px;
+    top: 26px;
+    position: absolute;
+    transition: top .2s;
+    z-index: 0;
+}
+
+.contactus .txt-control {
+    display: block;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    position: absolute;
+    top: 26px;
+    z-index: 1;
+}
+
+.contactus .txt-control:focus {
+    border-color: rgb(63, 81, 181);
+    border-bottom-width: 2px;
+}
+
+.contactus .txt-control:focus + label, .contactus .txt-control.ng-not-empty + label {
+    top: 6px;
+    font-size: 10px;
+    color: rgb(63, 81, 181);
+}
+.contactus #status{
+    position: static;
+    display: block;
+    height: 25px;
+}
+</style>
+<div>
+    <img class="img-responsive" src="images1/headerimg/contact1.jpg" style="background-repeat: no-repeat;">
+    <div class="titleHead">
+        <h1>Contact Us</h1></div>
+</div>
+<div class="row contactus" ng-controller="contactCtrl">
+    <div class="col-lg-6 addrdiv">
+        <div class="page">
+            <!-- <h1>Contact Us</h1> -->
+            <div>
+                <div class="menu">
+                    <div class="title" data-list="lst1" data-top="100px">Global Head Office - UAE</div>
+                    <div class="title" data-list="lst2" data-top="112px">GCC Service Centre - Dubai</div>
+                    <div class="title" data-list="lst3" data-top="125px">Corporate Office - India</div>
+                    <div class="title active" data-list="lst4" data-top="138px">Distribution Office - Chennai</div>
+                    <div class="title" data-list="lst5" data-top="150px">Regional Office - Bangalore</div>
+                    <div class="title" data-list="lst6" data-top="186px">Singapore</div>
+                </div>
+                <div class="list lst1">
+                    <div class="country"><span class="flag uae"></span>UAE</div>
+                    <div class="headtxt">Commnet Systems Consultancy LLC</div>
+                    Office No.301, Centurion Star Building</br>
+                    Tower A, Port Saeed</br>
+                    Dubai, UAE, PO Box 117133</br>
+                    Tel: 04-2955299</br>
+                    Fax: 04-2955256
+                </div>
+                <div class="list lst2">
+                    <div class="country"><span class="flag uae"></span>UAE</div>
+                    <div class="headtxt">Commnet Systems Consultancy LLC</div>
+                    I-16, S-7 Morocco Cluster</br>
+                    International City</br>
+                    Dubai, UAE</br>
+                    Tel: 044357405
+                </div>
+                <div class="list lst3">
+                    <div class="country"><span class="flag india"></span>INDIA</div>
+                    <div class="headtxt">Commnet Systems Consultancy Pvt Ltd</div>
+                    No.5, Shiyam Mythri Flat No.3B</br>
+                    PTRajan Salai, KK Nagar</br>
+                    Chennai-600078, Tamilnadu, India</br>
+                    Tel: (+91) 44 4261 2928</br>
+                    Fax: (+91) 44 4261 4335
+                </div>
+                <div class="list lst4 active">
+                    <div class="country"><span class="flag india"></span>INDIA</div>
+                    <div class="headtxt">Commnet Distribution Pvt Ltd</div>
+                    No.5, Shiyam Mythri Flat No.2B</br>
+                    PTRajan Salai, KK Nagar</br>
+                    Chennai-600078, Tamilnadu, India</br>
+                    Tel: (+91) 44 4337 3666</br>
+                    Fax: (+91) 44 4261 4335
+                </div>
+                <div class="list lst5">
+                    <div class="country"><span class="flag india"></span>INDIA</div>
+                    <div class="headtxt">Commnet Systems Consultancy Pvt Ltd</div>
+                    No.861, 1st Floor, 1st Main Road</br>
+                    Kengari Upanagar, Kengari</br>
+                    Bangalore-560060, Karnataka, India</br>
+                    Tel: 080-28482509
+                </div>
+                <div class="list lst6">
+                    <div class="country"><span class="flag singapore"></span>SINGAPORE</div>
+                    <div class="headtxt">Commnet Systems Consultancy Pte Ltd</div>
+                    89, Short Street</br>
+                    #10-08 Golden Wall Centre</br>
+                    Singapore-188216</br>
+                    Tel: +65 6336 8007, Mobile : +65 81565629 Fax : +65 6337 8007
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 formcol">
+        <div class="formdiv">
+            <div class="head-txt h3">Enquiry form</div>
+            <form>
+                <div class="form-group frm50">
+                    <input type="text" class="txt-control" id="name" name="name" ng-model="name" autofocus required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group frm50">
+                    <input type="tel" class="txt-control" id="phone" name="phone" ng-model="phone" autofocus required>
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div class="form-group frm50">
+                    <input type="email" class="txt-control" id="email" name="email" ng-model="email" autofocus required>
+                    <label for="email">Email ID</label>
+                </div>
+                <div class="form-group frm70">
+                    <textarea type="text" class="txt-control" id="enquiry" name="enquiry" ng-model="inquiry" autofocus required>
+                    </textarea>
+                    <label for="inquiry">Inquiry</label>
+                </div>
+                <label id="status"></label>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('.contactus .menu .title').click(function() {
+        $('.contactus .menu .title').removeClass('active');
+        $('.contactus .list').removeClass('active');
+        $(this).addClass('active');
+        var elName = $(this).attr('data-list');
+        $('.contactus .' + elName).addClass('active');
+        $('.contactus .list').css('top', $(this).attr('data-top'));
+    });
+
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+
+        var data = {
+            name: $("#name").val(),
+            phone: $("#phone").val(),
+            email: $("#email").val(),
+            inquiry: $("#inquiry").val()
+        };
+
+
+        $.ajax({
+            type: 'POST',
+            url: 'modules1/mail_handler.php',
+            data: data,
+            cache: false,
+            success: function(data) {
+                $('#status').html(data).fadeIn('fast');
+                $('#status').delay(3000).fadeOut('slow');
+                $('form').trigger("reset");
+            },
+            error: function() {
+                // Handle errors here
+                console.log('ERRORS: ');
+                // STOP LOADING SPINNER
+            }
+        });
+
+    });
+});
+</script>

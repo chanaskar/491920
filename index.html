@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Commnet Distibution</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images1/favicon.jpg" type="image/gif" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css1/mainlayout.css">
+    <link rel="stylesheet" type="text/css" href="css1/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css1/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css1/responsive.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="body" ng-app="comdist">
+    <div class="container-fluid">
+    	<div ui-view="header"></div>
+        <div ui-view="page" class="page"></div>
+        <div class="footer-clone"></div>
+        <div ui-view="footer" class="footer"></div>
+        <div ui-view="gnm" class="gnm"></div>
+    </div>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="lib/angular-messages.min.js"></script>
+    <script type="text/javascript" src="lib/angular-aria.min.js"></script>
+    <script type="text/javascript" src="app1.js"></script>
+
+    <script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();   
+		});
+	</script>
+
+</body>
+
+</html>

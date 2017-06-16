@@ -1,0 +1,80 @@
+<style>
+.header{
+	width: 100%;
+	position: fixed;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	z-index: 2;
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,.15);
+	line-height: 90px;
+}
+.header .img{
+    /*margin-left: 30px;*/
+    margin-top: 15px;
+}
+.header a:focus, .header a:hover, .header a.active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #b02923;
+}
+.header li a{
+	padding: 10px;
+	border-radius: 5px;
+	font-family: 'Open Sans', verdana;
+    font-size: 16px;
+    color: #0089c7;
+}
+.header .micon{
+    color: #0089c7;
+    float: left;
+}
+.header .tollicon{
+   margin-top: -35px;
+
+}
+.header .tollicon>a{
+    color: #0089c7;
+}
+.header .list-inline.menulist{
+    float: left;
+    margin-left: 20px;
+}
+</style>
+<div class="header row" ng-controller="headerCtrl as head1">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+        <div class="col-lg-2">
+        <a ui-sref="page.home"><img class="img-responsive img" src="images1/logo.png" alt="logo"></a>
+        </div>
+        <div class="col-lg-10">
+            <ul class="list-inline menulist">
+                <li><a ui-sref="page.home" class="mnu-home"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a ui-sref="page.aboutus" class="mnu-aboutus">About Us</a></li>
+                <li><a ui-sref="page.product" class="mnu-products">Products</a></li>
+                <li><a ui-sref="page.alliance" class="mnu-alliance">Business Alliance</a></li>
+                <li><a ui-sref="page.contact" class="mnu-contact">Contact</a></li>
+                <li><a ui-sref="page.career" class="mnu-career">Careers</a></li>
+                <!-- <li><a ui-sref="page.home">Worldwide</a></li> -->                
+            </ul>
+            <div class="tollicon">
+                <i class="material-icons micon">call</i><a href="tel://+8002666638">Toll-Free: (800) 2666638</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <i class="burger-menu material-icons">menu</i>
+</div>
+<script>
+
+$(document).ready(function() {
+
+    
+    $('.burger-menu').click(function(){
+        $('.gnm').addClass('active'); 
+        setTimeout(function(){ $('.gnm section').addClass('active'); }, 10);
+        $('body').css('overflow','hidden');
+    });
+
+});
+
+</script>

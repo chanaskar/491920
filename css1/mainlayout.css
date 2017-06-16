@@ -1,0 +1,258 @@
+.body .row {
+    margin: 0;
+    background-color: #fff;
+}
+.footer {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    /*margin-top: 70px;*/
+    bottom: 0;
+}
+
+.footer-clone {
+    background-color: transparent;
+    width: 100%;
+    /* margin-top: 70px; */
+    height: 375px;
+    z-index: -100;
+    position: absolute;
+}
+
+.page {
+    margin-top: 102px;
+}
+
+.maindiv{
+	top:100px;
+	position: relative;
+	margin-bottom: 10px;
+}
+.sidemenu .smproduct li{
+	background-color: white;
+	width: 233px;
+}
+.sidemenu .smproduct li>a{
+	text-decoration: none;
+	font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    display: inline-block;
+    color: #212121;
+    font-family: Roboto,Arial,sans-serif;
+}
+.sidemenu .smproduct li{
+	padding: 20px 15px;
+	border-bottom: 1px  solid #ddd;
+	border-right: 1px  solid #ddd;
+	border-left: 1px  solid #ddd;
+	position: relative;	
+    cursor: pointer;
+}
+.sidemenu .smproduct li:first-child{
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.sidemenu .smproduct li.active {
+    background-color: #b02923;
+}
+
+.sidemenu .smproduct li.active>a {
+    color: #fff;
+}
+
+.titleHead {
+    width: 350px;
+    position: absolute;
+    top: 120px;
+    z-index: 0;
+}
+
+.titleHead>h1 {
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 1px 1px #080808;
+    color: #e4e4e4;
+}
+
+
+.prosub h5>.ptitle.prodt{
+    height: 40px;
+    margin-bottom: 0;
+}
+body{
+	background-color: #f3f3f3;
+	font-family: Roboto,Arial,sans-serif;
+    letter-spacing: 0;
+}
+
+.sidemenu .smproduct .col-lg-3{
+	width:233px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.sidemenu .smproduct>ul{
+	margin-left: -41px;
+}
+.prodimg{
+	height: 200px;
+	width: 150px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	position: relative;
+    border: 1px solid #0089c7;
+    background-size: 99%;
+    background-position: 1px 1px;
+}
+
+.productcont{
+	margin-top: 10px;
+	background-color: white;
+	border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+	margin-left: -9px;
+	margin-bottom: 10px;
+}
+.sidemenu .col-lg-3.smproduct{
+	width: 20%;
+}
+.sidemenu .col-lg-9.productcont{
+	width: 79.5%;
+}
+.prosub{
+	padding: 20px;
+}
+.prod-features {
+	font-family: Roboto,Arial,sans-serif;
+    padding: 0;
+    letter-spacing: 0;
+    list-style-type: none;
+}
+.prod-features li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 7px 0;
+}
+.prod-features li .fa {
+    margin-right: 10px;
+    color: #af2822;
+}
+.ptitle{
+	font-weight: 500;
+    font-size: 15px;
+    display: block;
+    font-family: Roboto,Arial,sans-serif;
+    letter-spacing: 0;
+}
+.prosub{
+	border-bottom: 1px solid #ddd;
+}
+.prosub.first{
+	border-right: 1px solid #ddd;
+}
+.productcont .col-lg-6.prosub{
+    height: 275px;
+    border-right: 1px solid #ddd
+}
+
+.abth {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3em;
+    color: #0075c9;
+}
+
+.abtp {
+    font-family: "museo-sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.7;
+}
+.abtp.abtli {
+    list-style-type: disc;
+}
+
+
+a{
+  text-decoration: none;
+}
+body .container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+
+.smproduct .fa.fa-chevron-right{
+    right: 0;
+    position: absolute;
+    margin-right: 10px;
+    margin-top: 3px;
+    color: white;
+}
+.smproduct .fa.fa-chevron-right.active{
+    color: white;
+}
+.productcont .row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    /*border-radius: 10px;*/
+}
+ 
+::-webkit-scrollbar-thumb {
+    /*border-radius: 10px;*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.burger-menu {
+    line-height: 55px;
+    vertical-align: top;
+    font-size: 40px;
+    float: right;
+    margin-right: 15px;
+    color: #069edb;
+}
+.gnm {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .6);
+    z-index: 20;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.gnm.active {
+    display: block;
+}
+
+.gnm section {
+    position: absolute;
+    top: 0px;
+    background-color: #fff;
+    width: 280px;
+    height: 100%;
+    right: -280px;
+    overflow-y: scroll;
+    padding: 10px;
+    box-shadow: 1px 1px 10px black;
+    overflow-x: hidden;
+    transition: right .2s;
+}
+
+.gnm section.active {
+    right: -8px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <style type="text/css">
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="sticky"></div>
+    <script type="text/javascript">
+    $(window).scroll(function() {
+        var sticky = $('.sticky'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 100) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+    });
+    </script>
+    <script type="text/javascript" src="/lib/jquery.min.js"></script>
+</body>
+
+</html>

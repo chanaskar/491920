@@ -1,0 +1,187 @@
+<style>
+	.gnm nav {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		transition: left .5s;
+	}
+
+	.gnm nav.right{ left: 100%; }
+	.gnm nav.left{ left: -100%; }
+	.gnm nav .menu-header {
+		height: 55px;
+		background-color: #069edb;
+		padding: 10px;
+	}
+	.gnm nav .menu-header .back, .gnm nav .menu-header .text, .gnm nav .menu-header .close {
+		height: 35px;
+		color: #fff;
+		float:left;
+		line-height: 35px;
+		text-align: center;
+	}
+
+	.gnm nav .menu-header .back, .gnm nav .menu-header .close {
+		width: 35px;
+		font-size: 30px;
+    cursor: pointer;
+	}
+
+	.gnm nav .menu-header .back.material-icons, .gnm nav .menu-header .close.material-icons {
+		border: 1px solid #fff;
+		border-radius: 35px;
+	}
+
+	.gnm nav .menu-header .text {
+		width: 182px;
+		font-size: 14px;
+		font-weight: bold;
+    padding: 0 5px;
+	}
+
+	.gnm nav article {
+		padding: 10px;
+		height: calc(100% - 55px);
+		overflow-y: scroll;
+	}
+	.gnm nav article .menu {
+		padding: 10px;
+		background-color: #e1e1e1;
+		margin-bottom: 2px;
+		cursor: pointer;
+    font-weight: bold;
+	}
+
+	.gnm nav article .menu.arrow {
+	background-image: url(/images1/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: calc(100% - 10px);
+	}
+</style>
+<section>
+	<nav class="navhome">
+		<div class="menu-header">
+			<div class="back"></div>
+			<div class="text"></div>
+			<div class="close material-icons">close</div>
+		</div>
+		<article>
+			<div class="menu exit" ui-sref="page.home">Home</div>
+			<div class="menu exit" ui-sref="page.aboutus">About Us</div>
+			<div class="menu exit" ui-sref="page.product">Products</div>
+			<div class="menu exit" ui-sref="page.alliance">Business Alliance</div>
+			<div class="menu exit" ui-sref="page.contact">Contact Us</div>
+			<div class="menu exit" ui-sref="page.career">Career</div>
+			<!-- <div class="menu exit">Worldwide</div>
+			<div class="menu exit">Enquiry Form</div> -->
+		</article>
+	</nav>
+
+	<!-- <nav class="right navservice">
+		<div class="menu-header">
+			<div class="back material-icons" data-back="navhome">arrow_back</div>
+			<div class="text ellipsis">Services</div>
+			<div class="close material-icons">close</div>
+		</div>
+		<article>
+			<div class="menu arrow" data-next="naventerprise">Enterprise Systems Group</div>
+			<div class="menu arrow" data-next="navinfrastructure">Infrastructure Systems Group</div>
+			<div class="menu arrow" data-next="navapplication">Application Systems Group</div>
+			<div class="menu exit" ui-sref="pilot.services-professional">Professional Services Group</div>
+		</article>
+	</nav> -->
+
+	<!-- <nav class="right naventerprise">
+		<div class="menu-header">
+			<div class="back material-icons" data-back="navservice">arrow_back</div>
+			<div class="text ellipsis">Enterprise Systems Group</div>
+			<div class="close material-icons">close</div>
+		</div>
+		<article>
+			<div class="menu exit" ui-sref="pilot.services-enterprise-datacenter">Data Center Services</div>
+			<div class="menu exit" ui-sref="pilot.services-enterprise-network">Network Services</div>
+			<div class="menu exit" ui-sref="pilot.services-enterprise-cloud">Cloud Services</div>
+		</article>
+	</nav> -->
+
+	<!-- <nav class="right navinfrastructure">
+		<div class="menu-header">
+			<div class="back material-icons" data-back="navservice">arrow_back</div>
+			<div class="text ellipsis">Infrastructure Systems Group</div>
+			<div class="close material-icons">close</div>
+		</div>
+		<article>
+			<div class="menu exit" ui-sref="pilot.services-infrastructure-structurecabling">Structured Cabling</div>
+			<div class="menu exit" ui-sref="pilot.services-infrastructure-powersolution">Power Solutions</div>
+			<div class="menu exit" ui-sref="pilot.services-infrastructure-securitysystems">Security Systems</div>
+			<div class="menu exit" ui-sref="pilot.services-infrastructure-datacenter">Data Centre Infrastruture</div>
+			<div class="menu exit" ui-sref="pilot.services-infrastructure-iptel">IP Telephony</div>
+			<div class="menu exit" ui-sref="pilot.services-infrastructure-wifi">Manage Wi-Fi</div>
+		</article>
+	</nav> -->
+
+	<!-- <nav class="right navapplication">
+		<div class="menu-header">
+			<div class="back material-icons" data-back="navservice">arrow_back</div>
+			<div class="text ellipsis">Application Systems Group</div>
+			<div class="close material-icons">close</div>
+		</div>
+		<article>
+			<div class="menu exit" ui-sref="pilot.services-application-appsec">Application Security</div>
+			<div class="menu exit" ui-sref="pilot.services-application-mobappsec">Mobile Application Security</div>
+			<div class="menu exit" ui-sref="pilot.services-application-ntsec">Network Security</div>
+			<div class="menu exit" ui-sref="pilot.services-application-infosec">Information Security Consulting</div>
+		</article>
+	</nav>
+
+	<nav class="right navindustries">
+		<div class="menu-header">
+			<div class="back material-icons" data-back="navhome">arrow_back</div>
+			<div class="text ellipsis">Industries</div>
+			<div class="close material-icons">close</div>
+		</div>
+		<article>
+			<div class="menu exit" ui-sref="pilot.industries-banking">Banking & Financial</div>
+			<div class="menu exit" ui-sref="pilot.industries-energy">Energy & Utilities</div>
+			<div class="menu exit" ui-sref="pilot.industries-publicsector">Public Sector & Government</div>
+			<div class="menu exit" ui-sref="pilot.industries-retail">Retail & Consumer</div>
+			<div class="menu exit" ui-sref="pilot.industries-technology">Technology</div>
+		</article>
+	</nav> -->
+</section>
+
+<script>
+var currentPage = "navhome";
+$(document).ready(function() {
+	$('[data-next]').click(function(){
+		var pg = $(this).attr('data-next');
+		$('.' + pg).removeClass('right');
+		$('.' + currentPage).addClass('left');
+		currentPage = pg;
+	});
+
+	$('[data-back]').click(function(){
+		var pg = $(this).attr('data-back');
+		$('.' + pg).removeClass('left');
+		$('.' + currentPage).addClass('right');
+		currentPage = pg;
+	});
+
+	function fClose() {
+		$('.gnm section').removeClass('active');
+		setTimeout(function(){ $('.gnm').removeClass('active');  }, 500);
+		$('body').css('overflow','initial');
+	}
+
+	$('nav .menu-header .close').click(function(){
+		fClose();
+	});
+
+	$('.exit').click(function() {
+		fClose();
+	});
+})
+</script>

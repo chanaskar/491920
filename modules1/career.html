@@ -1,0 +1,245 @@
+<style>
+.career .careerform .formdiv {
+    max-width: 350px;
+    margin: 25px auto;
+    top: 10px;
+}
+
+.career form {
+    background-color: rgb(250, 250, 250);
+    padding: 10px 15px;
+}
+
+.career .careerform .head-txt {
+    background-color: #2196F3;
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+}
+
+.career .form-group {
+    position: relative;
+}
+
+.career .form-group.frm50 {
+    height: 50px;
+}
+
+.career .form-group.frm70 {
+    height: 70px;
+}
+
+.career label {
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 12px;
+    top: 26px;
+    position: absolute;
+    transition: top .2s;
+    z-index: 0;
+}
+
+.career .txt-control {
+    display: block;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    position: absolute;
+    top: 26px;
+    z-index: 1;
+}
+
+
+/*.career .txt-control:focus {
+    border-color: rgb(63, 81, 181);
+    border-bottom-width: 2px;
+}
+
+.career .txt-control:focus + label {
+    top: 6px;
+    font-size: 10px;
+    color: rgb(63, 81, 181);
+}*/
+
+.career .txt-control:focus {
+    border-color: rgb(63, 81, 181);
+    border-bottom-width: 2px;
+}
+
+.career .txt-control:focus + label,
+.career .txt-control.ng-not-empty + label {
+    top: 6px;
+    font-size: 10px;
+    color: rgb(63, 81, 181);
+}
+
+.career .openings .job {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.career .career-text p,
+.career-text span,
+.openings span {
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 22px;
+    line-height: 1.47;
+    color: #736d6d;
+    text-align: justify;
+    padding-right: 350px;
+    padding-left: 5px;
+}
+
+.career .career-text p {
+    background-image: url('/images1/career.png');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.careerform .formdiv .btn-file {
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: none;
+    width: 100%;
+    background-color: #c5c2c2;
+}
+
+.career .careerform form .btn.sub {
+    line-height: 10px;
+}
+.career .openings>h1{
+    border-bottom: 1px solid #736d6d;
+    color: #736d6d;
+}
+
+/*#f5e5e5;*/
+</style>
+<div class="row career">
+    <div>
+        <img class="img-responsive" src="images1/headerimg/career.jpg" style="background-repeat: no-repeat;">
+        <div class="titleHead">
+            <h1>Career</h1></div>
+    </div>
+    <div class="col-lg-10 col-lg-offset-1 career-text">
+        <!-- <h1>Careers</h1> -->
+        <p>Commnet believes in its people & offer exciting and challenging environment for staff to perform & grow. Our employees dedicated time, talents, abilities, along with enthusiasm & belief in us, has led us to success in the last 2 decades. If you wish to be part of an organization that is at the leading edge of technological changes; where performance & efforts are required, and are well rewarded…we welcome you to join us….</p>
+        <span>Please send your resume to careers@commnet.ae</span>
+        <span>(or)</span>
+    </div>
+    <div class="col-lg-6 careerform">
+        <div class="formdiv">
+            <div class="head-txt h3">Apply</div>
+            <form>
+                <div class="form-group frm50">
+                    <input type="text" class="txt-control" id="txtName" ng-model="txtName" autofocus required>
+                    <label>Name</label>
+                </div>
+                <div class="form-group frm50">
+                    <input type="text" class="txt-control" id="txtTitle" ng-model="txtTitle" autofocus required>
+                    <label>Job Title</label>
+                </div>
+                <div class="form-group frm50">
+                    <input type="tel" class="txt-control" id="txtPhNo" ng-model="txtPhNo" autofocus required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="form-group frm50">
+                    <input type="email" class="txt-control" id="txtEmail" ng-model="txtEmail" autofocus required>
+                    <label>Email ID</label>
+                </div>
+                <div class="btn btn-primary btn-file">Upload Resume
+                    <input type="file" hidden>
+                </div>
+                <div class="alert-success" id="status"></div>
+                <button type="submit" class="btn btn-primary sub">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-6 openings">
+        <h1>COMMNET Careers</h1>
+        <span>No Current Openings</lspan>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    var files;
+
+    // Add events
+    $('input[type=file]').on('change', prepareUpload);
+
+    // Grab the files and set them to our variable
+    function prepareUpload(event) {
+        files = event.target.files;
+    }
+
+    $('form').on('submit', uploadFiles);
+
+    function sendMail(filemsg) {
+        var filePath = "stud/" + $("[type=file]").val().replace(/^.*[\\\/]/, '');
+        var data = {
+            name: $("#txtName").val(),
+            title: $("#txtTitle").val(),
+            phone: $("#txtPhNo").val(),
+            email: $("#txtEmail").val(),
+            path: filePath
+        }
+        $.ajax({
+            type: 'POST',
+            url: 'modules1/mail_handler1.php',
+            data: data,
+            cache: false,
+            success: function(data) {
+                $('#status').html(filemsg + "<br>" + data).fadeIn('slow');
+                $('#status').delay(5000).fadeOut('slow');
+            },
+            error: function() {
+                // Handle errors here
+                console.log('ERRORS: ');
+                // STOP LOADING SPINNER
+            }
+        });
+    }
+
+    // Catch the form submit and upload the files
+    function uploadFiles(event) {
+        event.stopPropagation(); // Stop stuff happening
+        event.preventDefault(); // Totally stop stuff happening
+
+        // START A LOADING SPINNER HERE
+
+        // Create a formdata object and add the files
+
+        var data = new FormData();
+        $.each(files, function(key, value) {
+            data.append(key, value);
+        });
+
+        $.ajax({
+            url: 'modules1/fileupload.php?files',
+            type: 'POST',
+            data: data,
+            cache: false,
+            dataType: 'json',
+            processData: false, // Don't process the files
+            contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+            success: function(data) {
+                if (data.indexOf("has been uploaded") > -1) {
+                    sendMail(data);
+                } else {
+                    $('#status').html(data).fadeIn('slow');
+                    $('#status').delay(5000).fadeOut('slow');
+                }
+            },
+            error: function() {
+                // Handle errors here
+                console.log('ERRORS: ');
+                // STOP LOADING SPINNER
+            }
+        });
+    }
+});
+</script>

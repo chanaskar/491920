@@ -1,0 +1,337 @@
+<style>
+.aboutus .col-lg-8.abtcon {
+    padding-left: 70px;
+}
+
+.aboutus {
+    margin-top: 10px;
+    background-color: white;
+}
+
+.aboutus .list-group-item {
+    border: 1px solid #b02923;
+    background-color: #b02923;
+}
+
+.aboutus .list-group-item:nth-child(2) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.aboutus .list-group-item:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.aboutus .row.abtmid {
+    width: 750px;
+    margin-left: 50px;
+}
+
+.aboutus .tab-heading {
+    border-bottom: 1px solid #cfcfcf;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.aboutus .tab-heading div {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.aboutus .tab-heading .active {
+    border-bottom: 2px solid #b02923;
+}
+
+.aboutus .tab-content .tab-pane {
+    padding: 20px 40px;
+    min-height: 500px;
+}
+
+.aboutus .leadership {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.aboutus .leadership .photo{
+    /*background-image: url('/images1/avat.jpg');*/
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    /*border: 1px solid #ddd;*/
+}
+.aboutus .kar{
+    background-image: url('/images1/leader/karthik.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.aboutus .gop{
+    background-image: url('/images1/leader/gopi.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.aboutus .nik{
+    background-image: url('/images1/leader/nikhil.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*.aboutus .leadership .limg.kar{
+    background-image: url('/images1/leader/nikhil.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.aboutus .leadership .limg.gop{
+    background-image: url('/images1/leader/nikhil.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.aboutus .leadership .limg.nik{
+    background-image: url('/images1/leader/nikhil.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+*/
+/*.aboutus .leadership .text {
+    border-bottom: 1px solid #ddd;
+}
+*/
+.aboutus .leadership .photo>img{
+    height: 50px;
+    left: 0;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.aboutus .text .leadername {
+    font-size: 18px;
+    line-height: 1.47;
+    color: #fff;
+    font-weight: bold;
+}
+
+/*.aboutus .leadership .divider:before{
+   content: "\f054";
+   font-family: FontAwesome;
+   font-weight: normal;
+   font-style: normal;
+   margin:0px 0px 0px 10px;
+   text-decoration:none;
+   float: right;
+   color: white;
+}*/
+.aboutus .leadership .fa{
+    color: white;
+    float: right;
+    margin-top: -33px;
+    display: block;
+    font-size: 17px;
+}
+.aboutus .text .leaderole {
+    font-size: 16px;
+    line-height: 1.47;
+    color: #fff;
+}
+
+.aboutus .abth {
+    text-align: center;
+    font-size: 20px;
+    color: #3e3f3a;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.aboutus .col-lg-4.lship {
+    margin-top: 13px;
+}
+
+.aboutus .leadership .list-group-item:not(:last-child) .divider {
+    border-bottom: 1px solid #fff;
+    margin-left: 47px;
+    top: 65px;
+    position: relative;
+}
+.aboutus .modal .modal-content{
+    border-radius: 0;
+    margin: 100px auto;
+
+}
+.aboutus .modal .leader-image{
+    width: 75px;
+    height: 75px;
+    border: 1px solid #ddd;
+    float: left;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    /*background-image: url('/images1/avat.jpg');*/
+    background-position: center;
+    background-color: #fff;
+}
+.aboutus .modal .modal-body{
+    text-align: justify;
+    font-size: 17px;
+    color: #3e3f3a;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.aboutus .modal .modal-dialog{
+    width: 700px;
+}
+
+.aboutus .modal .modal-body{
+    background-color: #fff;
+    /*color: #0089c7;*/
+}
+
+.aboutus .modal .modal-header{
+    background-color:#b02923;
+    color: #fff;
+}
+.aboutus .row.list-group-item:hover{
+    cursor: pointer;
+}
+</style>
+<div class="row aboutus" ng-controller="aboutusCtrl as aboutus">
+    <div>
+        <img class="img-responsive" src="images1/headerimg/about.jpg" style="background-repeat: no-repeat;">
+        <div class="titleHead">
+            <h1>About Us</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div>
+                <!-- Nav tabs -->
+                <div class="row tab-heading">
+                    <div class="col-lg-2 col-lg-offset-2 tab1 active" ng-click="aboutus.tabClick(1)">Commnet</div>
+                    <div class="col-lg-2 tab2" ng-click="aboutus.tabClick(2)">Our Journey</div>
+                    <div class="col-lg-4 tab3" ng-click="aboutus.tabClick(3)">Why Choose Commnet?</div>
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane tab1 active">
+                        <p class="abtp">Commnet Distribution Pvt.Ltd is committed to provide safety to customer by continuously developing and delivering new technologies, innovative products, solutions and fantastic services, by abiding all its commitments to customers</p>
+                        <p class="abtp">We develop and demonstrate our expertise through our innovative and leading-edge approach to creating and delivering the right solution. Visual Security System is differentiated in the marketplace because we focus on the creation of value for our customers. We believe value is created by providing readily customized surveillance solutions through our new product developments and improvements. Commnet Distribution has unrivalled expertise in the security distribution industry, which create a first line of security at the perimeter of your property. Our security solutions are distributed to trade and professional installers, who position from simple home security cameras and video surveillance systems, to small business or large shop premises, complex projects, town centre CCTV systems and high rang profile buildings.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane tab2">
+                        <p class="abtp">Commnet began its operation in early 2000’s as a two member organization working as consultants for large Enterprise System Integrators. We grew at least by 200% year on year since our inception and stabilized ourselves as well- known It Consulting company over a period of time. Today our Global Head Office is Situated in Dubai and have branched out to India , Muscat. Qatar and Singapore with more than few hundred employees</p>
+                        <p class="abtp">At Commnet Distribution, we make it easy to choose the right technical support solutions to fit your business needs. We suggest a wide range of technical services and strategy including options for regular maintenance as well as emergency response to our Clients. Commnet Distribution has excellent business relationships with leading and Specialized companies Structured in Cabling and Data storage facilities. Commnet Distribution supply, install and configure Active Equipment for integrating connectivity involving structured cabling and communication rooms and end devices. Our Installations range from smaller business systems to large infrastructure corporate systems. Installations include new cabling systems, telephone systems and relocating existing cabling systems as well as temporary cabling. We focus on serving our customers to evaluate and make the best choices, by recognizing their specific business environment. We are dedicated to serving the technology needs of small to large Scale businesses.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane tab3">
+                        <p class="abtp">What are the challenges of today’s business? Minimise risk, manage customer requirements and react to spiraling infrastucture service and integration growth – all while working with budget and resource constraints. For more than 17 years, Commnet has helped clients apply technology that drives and supports their business needs. As we continue to expand our capabilities, we remain focused on helping you find and implement solutions that impact business with measurable results. Our Products for data center migration, security, networking and next generation technologies. Unique delivery of performance gains and maximizes the business value. </p>
+                        <ul>
+                            <li class="abtp abtli">Strengthen business growth strategies</li>
+                            <li class="abtp abtli">Focus on product performance delivery and service quality</li>
+                            <li class="abtp abtli">Manage client costs effectively</li>
+                            <li class="abtp abtli">Talented team working on potential growth</li>
+                            <li class="abtp abtli">Customer experience high service</li>
+                            <li class="abtp abtli">Optimize product risk management and quality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ng-repeat="p in aboutus.leaderList" -->
+        <div class="col-lg-4 lship">
+            <div class="leadership">
+                <h1 class="abth text-center">Leadership</h1>
+                <div class="row list-group-item" id="myModal1">
+                    <div class="col-lg-2 photo"><!-- <div class="limg kar"></div> -->
+                        <img src="/images1/leader/karthik.jpg">
+                    </div>
+                    <div class="col-lg-10 text">
+                        <div class="leadername">Karthikeyan Narayanasamy</div>
+                        <div class="leaderole">Chief Executive Officer</div>
+                    </div>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <div class="divider"></div>
+                </div>
+                <div class="row list-group-item" id="myModal2">
+                    <div class="col-lg-2 photo"><!-- <div class="limg gop"></div> -->
+                        <img src="/images1/leader/gopi.jpg">
+                    </div>
+                    <div class="col-lg-10 text">
+                        <div class="leadername">Gopala Krishnan</div>
+                        <div class="leaderole">Chief Project Office</div>
+                    </div>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <div class="divider"></div>
+                </div>
+                <div class="row list-group-item" id="myModal3">
+                    <div class="col-lg-2 photo"><!-- <div class="limg nik"></div> -->
+                        <img src="/images1/leader/nikhil.jpg">
+                    </div>
+                    <div class="col-lg-10 text">
+                        <div class="leadername">Nikhil Nair</div>
+                        <div class="leaderole">Chief Sales and Marketing Officer</div>
+                    </div>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal11" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <div class="leader-image kar"></div>
+                        <h4 class="modal-title">Karthikeyan Narayanasamy</h4>
+                        <cite>Chief Executive Officer</cite>
+                    </div>
+                    <div class="modal-body">
+                        <p>Karthikeyan hails from a small village named Koviloor , Thanjavur District, South India . His father was a farmer and had different type of plantations across Tamilnadu .However for Karthik his legacy was a stepping stone to become an far reached entrepreneur with diversified interest. With basic primary education in academics he moved out of his hometown to Singapore in the year 1998 to look out for a living but as the saying goes his destiny was Dubai, UAE. He started off being a mere structured cabling technician part of the Al-Ghurair Group.  He went on to found COMMNET , a strong IT Services Consulting company headquartered in Dubai ,with branches across GCC , India & Singapore. Today he is the Chairman & CEO of Commnet Group (Commnet Systems Consultancy LLC, Commnet Systems Consultancy India Pvt Ltd, Commnet Distribution Pvt LTD & Commnet Systems Consultancy Pte ltd )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal12" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <div class="leader-image gop"></div>
+                        <h4 class="modal-title">Gopala Krishnan</h4>
+                        <cite>Chief Project Officer</cite>
+                    </div>
+                    <div class="modal-body">
+                        <p>Gopala krishnan heads the Project Management Office (PMO) and is the Chief Project Officer since 2007 . Being the third employee of Commnet Family he is well known in the organization structure as well in the IT circles for his project management skills. He has seen Commnet grow from 3 people run organization to 100+ Today. Before Joining Commnet he has worked with different emirate business houses and is also graduate from Madras University. He was born in Tamil Nadu and currently based at Dubai , UAE.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal13" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <div class="leader-image nik"></div>
+                        <h4 class="modal-title">Nikhil Nair</h4>
+                        <cite>Chief Sales & Marketing Officer</cite>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nikhil Nair  is a Global Technology Executive with experience in transforming technology businesses across global markets and different customer industry segments, to profitable growth.</p>
+                        <p>Nikhil is the Chief Sales Officer for the Commnet Group. He is responsible to profitably grow the business across GCC/India/Singapore with a focus on revenue and sales; across all industry verticals & all technology practice areas. He is responsible for all strategic decisions relating to sales & revenue growth in the regions we have foot prints. He also has an additional charge of being the COO for India operations.</p>
+                        <p>Previously, he was with numerous Global IT Giants handling sales across the GCC & Indian Territories . He is a MBA in Sales & Information Technology and is based at Dubai, United Arab emirates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $("#myModal1").click(function(){
+        $("#myModal11").modal({backdrop: true});
+    });
+    $("#myModal2").click(function(){
+        $("#myModal12").modal({backdrop: true});
+    });
+    $("#myModal3").click(function(){
+        $("#myModal13").modal({backdrop: true});
+    });
+});
+</script>

@@ -1,0 +1,469 @@
+<style type="text/css">
+/* -------------------Start - Nav------------------- */
+
+#carouselNav {
+    overflow: hidden;
+}
+
+#carouselNav .text {
+    font-style: normal;
+    font-size: 26px;
+    position: absolute;
+    color: white;
+    text-shadow: 1px 2px 2px #020202;
+    z-index: 1;
+    max-width: 700px;
+}
+
+#carouselNav .text.txt1a,
+#carouselNav .text.txt2a,
+#carouselNav .text.txt3a {
+    top: -200px;
+    left: 30px;
+    opacity: 0;
+    transition: top 1s, opacity .5s;
+}
+.home .carousel-inner .homeimg{
+    width: 1375px;
+}
+
+#carouselNav .text.txt1b,
+#carouselNav .text.txt2b,
+#carouselNav .text.txt3b {
+    bottom: -200px;
+    left: 30px;
+    opacity: 0;
+    transition: bottom 1s, opacity .5s;
+}
+
+#carouselNav .text.txt1a.active,
+#carouselNav .text.txt2a.active,
+#carouselNav .text.txt3a.active {
+    top: 40px;
+    opacity: 1;
+}
+
+#carouselNav .text.txt1b.active,
+#carouselNav .text.txt2b.active,
+#carouselNav .text.txt3b.active {
+    bottom: 80px;
+    opacity: 1;
+}
+
+.carousel-indicators.right {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: right;
+    list-style: none;
+    right: 0;
+    background: rgba(0, 0, 0, .3);
+    height: 18px;
+    top: 206px;
+    padding-right: 10px;
+}
+
+
+/* -------------------End - Nav--------------------- */
+
+.home .lbl {
+    background-color: #fff;
+}
+
+.home .lbl .labldiv {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.home .we-grow {
+    /*background-color: #f3eeee;*/
+    color: #b02923;
+    padding: 10px;
+}
+
+.home .icon {
+    width: 75px;
+    height: 75px;
+    /*border-radius: 50%;
+    border: 1px solid #b02923;
+    border-right: 1px solid #b02923;*/
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.home .hometext {
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    font-size: 22px;
+    line-height: 1.47;
+    color: #736d6d;
+    text-align: center;
+    background-color: #fff;
+}
+
+.home .homenav {
+    height: 550px;
+    background-image: url('/images1/productlist/hnav1.jpg');
+    background-repeat: no-repeat;
+}
+
+.home .block1 .timg {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: 1px solid #212121;
+}
+
+.home .testimonial .text {
+    padding: 15px;
+}
+
+.home .block2 {
+    padding-left: 40px;
+}
+
+.home .hcdiv .dist {
+    width: 100%;
+    height: 225px;
+    background-repeat: no-repeat;
+}
+
+.home .hcdiv .labltext {
+    width: 100%;
+    height: 150px;
+    padding: 8px;
+    margin-top: -5px;
+}
+
+.home .hcdiv .labltext h6 {
+    text-align: center;
+    font-family: "museo-sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    ;
+    font-size: 18px;
+    color: #0089c7;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.home .hcdiv .labltext p {
+    text-align: justify;
+    font-family: "museo-sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    font-size: 14px;
+    color: #736d6d;
+}
+
+.home .hcdiv {
+    width: 280px;
+    height: 395px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    box-shadow: 0px 0px 12px #5d5b5b;
+}
+
+.home .hcdiv:hover {
+    box-shadow: 0px 6px 12px #5d5b5b;
+}
+
+.home .lbl .col-lg-4 {
+    padding-bottom: 40px;
+}
+
+.home .we-grow h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #736d6d;
+}
+
+.home .we-grow .list {
+    margin-bottom: 50px;
+}
+
+.home .we-grow p {
+    color: #3e3e3e;
+    text-align: justify;
+}
+.home .col-lg-10.wecontent{
+    border-left: 1px solid;
+    /*margin-top: 15px;
+    margin-bottom: 15px;*/
+}
+
+/*------ Start Testimonial ------------*/
+
+.home .testimonial h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: whitesmoke;
+}
+
+.home .testimonial {
+    padding-bottom: 110px;
+    padding-top: 40px;
+    background-color: #ad221c;
+}
+
+.testimonial .carousel-inner .item {
+    height: 250px;
+}
+
+.testimonial .carousel-control .arrow>i {
+    line-height: 200px;
+}
+
+
+/*------ End Testimonial ------------*/
+
+.home #carouselNav .carousel-control span>i {
+    line-height: 550px;
+}
+
+.home .carousel-control span>i {
+    color: #212121;
+    font-size: 27px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+.testimonial .carousel-caption.testi{
+    bottom: initial;
+    text-align: left;
+}
+
+.testimonial .carousel-caption.testi .posti{
+    margin-top: -10px;
+}
+
+.testimonial .img-test {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 10px;
+}
+
+.home .testimonial .testi>.fa {
+    color: #f39696;
+}
+.home .col-lg-6.list{
+    padding-left: 0px;
+    padding-right: 0px;
+    /*box-shadow: 5px 5px 10px #c76762;*/
+}
+.home .icon .fa{
+    font-size: 50px;
+    padding: 9px;
+    color:#0089c7;
+    /*margin-top: 17px;*/
+}
+.home .testiq{
+    font-size: 20px;
+    text-align: justify;
+}
+.home .img-test{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/images1/avat.jpg');
+}
+</style>
+<div class="home" ng-controller="homeCtrl as home">
+    <div id="carouselNav" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselNav" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselNav" data-slide-to="1"></li>
+            <li data-target="#carouselNav" data-slide-to="2"></li>
+        </ol>
+        <div class="text txt1a active">Transform to the future Moving you to the best Work Faster</div>
+        <div class="text txt1b active">We as Commnet are Leaders in business and technology services, helping our customer bring Tomorrow’s of work to life—today</div>
+        <div class="text txt2a">Technology Distribution</div>
+        <div class="text txt2b">Your Communication & Networking Partner</div>
+        <div class="text txt3a">Hardware Support</div>
+        <div class="text txt3b">Be connected with the world of technology & advancement</div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" data-slide="1">
+                <img src="/images1/nav/hnav1.jpg" class="homeimg" alt="">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item" data-slide="2">
+                <img src="/images1/nav/hnav2.jpg" class="homeimg" alt="">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item" data-slide="3">
+                <img src="/images1/nav/hnav3.jpg" class="homeimg" alt="">
+                <div class="carousel-caption"></div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carouselNav" role="button" data-slide="prev">
+            <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carouselNav" role="button" data-slide="next">
+            <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="row lbl">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="row">
+                <p class="hometext">At Commnet, we strive to deliver value through the combination of right people, processes, technologies and program management solutions. Our methods include- applying domain expertise in specific industry segments, utilizing a highly-skilled workforce, leveraging a proven global delivery model, implementing structured and scalable quality processes and methodologies and yet, staying cost-effective</p>
+                <div class="col-lg-4" ng-repeat="h in home.labelList">
+                    <div class="hcdiv">
+                        <!--<div class="dist" ng-class="h.type"></div>-->
+                        <div id="carousel{{h.type}}" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators right">
+                                <li data-target="#carousel{{h.type}}" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel{{h.type}}" data-slide-to="1"></li>
+                            </ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="/images1/label/{{h.type}}.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="/images1/label/{{h.type}}1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="labltext">
+                            <h6>{{h.head}}</h6>
+                            <p>{{h.txt}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row we-grow">
+        <h1>We Grow Together</h1>
+        <div class="col-lg-6 col-lg-offset-3 list">
+            <div class="row" ng-repeat="lh in home.weGrow">
+                <div class="col-lg-2">
+                    <div class="icon"><i class="{{lh.weid}}" aria-hidden="true"></i></div>
+                </div>
+                <div class="col-lg-10 wecontent">
+                    <h4>{{lh.lblhead}}</h4>
+                    <p>{{lh.lbltxt}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row testimonial">
+        <h1>Testimonial</h1>
+        <div id="carouselTestimonial" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                 <!-- ng-repeat="tst in home.testimonial" -->
+                    <div class="carousel-caption testi" data-slide="1">
+                        <div class="testiq">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>Commnet is our great business partner in helping us start the process. Commnet constantly challenged our thinking as well as helped us define, execute and measure monthly demand generation marketing campaigns that produced sales-accepted leads.  Through journey mapping with their Sellers’ Compass, Sales and Marketing learned where they can improve customer attraction and engagement. 
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="img-test"></div>
+                            <div><h4>Solomon</h4></div>
+                            <div class="posti"><cite>Director, G8 Infotech</cite></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-slide="2">
+                    <div class="carousel-caption testi">
+                        <div class="testiq">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>Commnet is a high-delivery, low-risk resource that I recommend to any technology company that is looking to improve Marketing ROI, create a market shaping vision and/or remove revenue generating obstacles.
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="img-test"></div>
+                            <div><h4>Thambidurai</h4></div>
+                            <div class="posti">Director,  TechnoTech Systems</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-slide="3">
+                    <div class="carousel-caption testi">
+                        <div class="testiq">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>A exponential positive growth of business is our goal towards strong success bond. If you want results from a team that is focused on showing you a clear path forward, coaching your team along the way, and have a big picture view yet understand the dynamics and details underlying success challenges.
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>                        
+                        <div>
+                            <div class="img-test"></div>
+                            <div><h4>Prakash Babu S.M</h4></div>
+                            <div class="posti">MD, S.k Systems</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-slide="3">
+                    <div class="carousel-caption testi">
+                        <div class="testiq">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>Commnet has helped me and my teams to align sales and marketing, improve the predictability of our sales cycle, and sell more effectively to hyper-informed buyers, which is about everybody in today’s world.  In short, their approach and services work with quick time-to-value.I have aligned my marketing, sales and support teams and processes to this  approach to build more enduring and profitable customer relationships.
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>                        
+                        <div>
+                            <div class="img-test"></div>
+                            <div><h4>Mahesh Pattabi</h4></div>
+                            <div class="posti">MD, Max Worth  Communication Pvt Ltd</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carouselTestimonial" role="button" data-slide="prev">
+                <span class="arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carouselTestimonial" role="button" data-slide="next">
+                <span class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('#carouselNav').carousel({
+        interval: 2000
+    }).bind('slide.bs.carousel', function(e) {
+        $('.text').removeClass('active');
+    }).bind('slid.bs.carousel', function(e) {
+        var i = $('.carousel-inner .active').attr("data-slide");
+        switch (i) {
+            case "1":
+                $('.txt1a').addClass('active');
+                $('.txt1b').addClass('active');
+                break;
+            case "2":
+                $('.txt2a').addClass('active');
+                $('.txt2b').addClass('active');
+                break;
+            case "3":
+                $('.txt3a').addClass('active');
+                $('.txt3b').addClass('active');
+                break;
+        }
+    });
+
+    $('#carouseltech').carousel({
+        interval: 3400
+    });
+    $('#carouselhard').carousel({
+        interval: 3600
+    });
+    $('#carouselimpact').carousel({
+        interval: 3800
+    });
+    $('#carouselTestimonial').carousel({
+        interval: 3800
+    });
+});
+</script>
